@@ -92,5 +92,7 @@ MonoBehaviour:
   tunnelNumber: 150
   tunnelLengthMax: 15
   Impas: {fileID: 1715630828646032, guid: 2a0876fd2cb21fc42addc46f873f2a48, type: 2}
+  Impas1: {fileID: 1715630828646032, guid: 9535501737a9b1048b5c4808481923cc, type: 2}
+  Impas2: {fileID: 1715630828646032, guid: d5f53092cf411204b9f7b9633c045798, type: 2}
   Pass: {fileID: 1138500127572938, guid: ec1313c09748bc049b40db4d91e335fb, type: 2}
   tagg: 

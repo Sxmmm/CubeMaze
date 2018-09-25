@@ -20,6 +20,8 @@ public class MazeGeneration : MonoBehaviour {
     private FloorTypes[,] map;
 
     public GameObject Impas;
+    public GameObject Impas1;
+    public GameObject Impas2;
     public GameObject Pass;
 
     public string tagg;
@@ -59,8 +61,20 @@ public class MazeGeneration : MonoBehaviour {
 
                     case FloorTypes.Impassable:
                         {
-                            GameObject go = Instantiate(Impas, new Vector3(x, (mazeY), y), Quaternion.identity);
-                            go.transform.parent = transform;
+                            float randInt = Random.Range(0,3);
+                            if (randInt == 0){
+                                GameObject go = Instantiate(Impas, new Vector3(x, (mazeY), y), Quaternion.identity);
+                                go.transform.parent = transform;
+                            }
+                            else if (randInt == 1){
+                                GameObject go = Instantiate(Impas1, new Vector3(x, (mazeY), y), Quaternion.identity);
+                                go.transform.parent = transform;
+                            }
+                            else if (randInt == 2){
+                                GameObject go = Instantiate(Impas2, new Vector3(x, (mazeY), y), Quaternion.identity);
+                                go.transform.parent = transform;
+                            }
+                            
                             break;
                         }
 
