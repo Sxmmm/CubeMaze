@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 // Uses parts of randomwalk from previous assignment
 
@@ -26,6 +27,8 @@ public class MazeGeneration : MonoBehaviour {
 
     public string tagg;
 
+    int passCount= 0;
+
     // Use this for initialization
     void Start () {
         tagg = gameObject.tag.ToString();
@@ -33,6 +36,7 @@ public class MazeGeneration : MonoBehaviour {
         CreateRand();
         DrawFloor();
         SetFace();
+        
     }
 
     void DrawFloor()
@@ -83,10 +87,16 @@ public class MazeGeneration : MonoBehaviour {
                         {
                             GameObject go = Instantiate(Pass, new Vector3(x, (mazeY-1), y), Quaternion.identity);
                             go.transform.parent = transform;
+
+                            passCount++;
                             break;
                         }
                 }
             }
+        }
+        if (passCount < 50)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 

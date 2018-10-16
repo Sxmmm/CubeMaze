@@ -11,6 +11,7 @@ TagManager:
   - 0
   - 5
   - Gravity
+  - canvas
   layers:
   - Default
   - TransparentFX

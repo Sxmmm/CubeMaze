@@ -11,10 +11,11 @@ public class CameraToFace : MonoBehaviour {
     void Start ()
     {
         gameCam = GameObject.FindGameObjectWithTag("MainCamera");
+        camPos = new Vector3(12.5f, 25f, 12.5f);
     }
-	
-	// Update is called once per frame
-	void Update ()
+
+    // Update is called once per frame
+    void Update ()
     {
         gameCam.GetComponent<Transform>().position = camPos;
     }
